@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index-final-style.css" />
+    <title>Dashboard Glenvidi Yosua</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <header class="header">
+        <div class="header__search">
+          <input type="text" id="search" placeholder="Cari sesuatu..." />
+        </div>
+        <div class="header__avatar">
+          <img
+            src="assets/Diriku.jpg"
+            alt="Foto Profil Glenvidi"
+            class="avatar-img"
+            tabindex="0"
+          />
+        </div>
+      </header>
+
+      <!-- Sidebar Navigation -->
+      <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <img src="assets/logoutama.png" alt="Logo Kesehatan" class="Logo" />
+        </div>
+        <ul class="sidenav__list">
+          <li class="sidenav__list-item">Beranda</li>
+          <li class="sidenav__list-item">Profil</li>
+          <li class="sidenav__list-item">Pengaturan</li>
+          <li class="sidenav__list-item">Konsultasi</li>
+          <li class="sidenav__list-item">Keluar</li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <div class="main-header">
+          <div class="main-header__heading">Halo, Glenvidi Yosua Gerungan</div>
+          <div class="main-header__updates">
+            <span class="mood-icon">
+              <img src="assets/happy.png" alt="Happy" />
+            </span>
+            <span class="mood-text">I'm Happy</span>
+          </div>
+        </div>
+
+        <!-- Overview Cards -->
+        <div class="main-overview">
+          <div class="overviewcard">
+            <div class="overviewcard__icon">
+              <img src="assets/tubuh.png" alt="BMI" style="width: 40px" />
+            </div>
+            <div class="overviewcard__info">
+              <strong>BMI:</strong> 22.5 (Normal) <br />
+              <small>Body Mass Index</small>
+            </div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__icon">
+              <img
+                src="assets/heart-rate.png"
+                alt="Heart Rate"
+                style="width: 40px"
+              />
+            </div>
+            <div class="overviewcard__info">
+              <strong>Detak Jantung:</strong> 72 BPM <br />
+              <small>Normal Resting Heart Rate</small>
+            </div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__icon">
+              <img src="assets/gelas.png" alt="Hydration" style="width: 40px" />
+            </div>
+            <div class="overviewcard__info">
+              <strong>Asupan Air:</strong> 2.5 Liter <br />
+              <small>Rekomendasi Harian</small>
+            </div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__icon">
+              <img src="assets/steps.png" alt="Steps" style="width: 40px" />
+            </div>
+            <div class="overviewcard__info">
+              <strong>Langkah:</strong> 8,000 <br />
+              <small>Target Harian</small>
+            </div>
+          </div>
+        </div>
+
+       <!-- Detailed Cards -->
+       <div class="main-cards">
+        <div class="card card-span">
+          <img src="assets/mentalH.jpg" alt="Kesehatan Mental" class="card-image" />
+          <h3>Kesehatan Mental</h3>
+          <p>
+            Jaga kesehatan mental dengan berolahraga, tidur cukup, dan berbicara
+            dengan orang terdekat. Hindari stres berlebih.
+          </p>
+          <a href="mental-health-tips.html" class="card-link">Baca Selengkapnya</a>
+        </div>
+        <div class="card">
+          <img src="assets/food.jpg" alt="Asupan Nutrisi" class="card-image" />
+          <h3>Asupan Nutrisi</h3>
+          <p>
+            Pastikan Anda mengonsumsi makanan sehat, seperti buah-buahan, sayuran,
+            dan protein. Kurangi konsumsi gula dan makanan olahan.
+          </p>
+          <a href="nutrition-guide.html" class="card-link">Pelajari Lebih Lanjut</a>
+        </div>
+        <div class="card">
+          <img src="assets/running.jpg" alt="Aktivitas Fisik" class="card-image" />
+          <h3>Aktivitas Fisik</h3>
+          <p>
+            Lakukan aktivitas fisik minimal 30 menit setiap hari. Jalan kaki, jogging,
+            atau bersepeda dapat membantu meningkatkan kesehatan jantung.
+          </p>
+          <a href="physical-activities.html" class="card-link">Temukan Aktivitas</a>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer__copyright">&copy; 2024 Glenvidi Yosua Gerungan</div>
+        <div class="footer__signature">
+          Dibuat dengan penuh cinta oleh Glenvidi
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
