@@ -32,11 +32,11 @@
           <img src="assets/logoutama.png" alt="Logo Kesehatan" class="Logo" />
         </div>
         <ul class="sidenav__list">
-          <li class="sidenav__list-item">Beranda</li>
-          <li class="sidenav__list-item">Profil</li>
-          <li class="sidenav__list-item">Pengaturan</li>
-          <li class="sidenav__list-item">Konsultasi</li>
-          <li class="sidenav__list-item">Keluar</li>
+          <li class="sidenav__list-item">Home</li>
+          <li class="sidenav__list-item">Profile</li>
+          <li class="sidenav__list-item">Settings</li>
+          <li class="sidenav__list-item">About</li>
+          <li class="sidenav__list-item">Quit</li>
         </ul>
       </aside>
 
@@ -134,6 +134,53 @@
           Dibuat dengan penuh cinta oleh Glenvidi
         </div>
       </footer>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menangani klik pada item navigasi
+            const navItems = document.querySelectorAll('.sidenav__list-item');
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const targetPage = e.target.textContent.toLowerCase().trim();
+                    
+                    switch(targetPage) {
+                        case 'home':
+                            window.location.reload();
+                            break;
+                        case 'quit':
+                            handleQuitConfirmation();
+                            break;
+                        default:
+                            navigateToPage(targetPage);
+                    }
+                });
+            });
+        
+            // Fungsi untuk navigasi ke halaman baru
+            function navigateToPage(pageName) {
+                const pages = {
+                    'profile': 'profile.html',
+                    'settings': 'settings.html',
+                    'about': 'about.html'
+                };
+                
+                if (pages.hasOwnProperty(pageName)) {
+                    window.location.href = pages[pageName];
+                }
+            }
+        
+            // Fungsi untuk menangani konfirmasi keluar
+            function handleQuitConfirmation() {
+                const confirmation = confirm('Apakah Anda yakin ingin keluar dari dashboard?');
+                
+                if (confirmation) {
+                    // Tampilkan splash screen sebelum keluar
+                    setTimeout(() => {
+                        window.location.href = 'splash-screen.html';
+                    }, 500); // Delay singkat untuk animasi
+                }
+            }
+        });
+        </script>
     </div>
   </body>
 </html>

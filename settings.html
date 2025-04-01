@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Settings Dashboard</title>
+    <link rel="stylesheet" href="index-final-style.css" />
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navItems = document.querySelectorAll(".sidenav__list-item");
+      navItems.forEach((item) => {
+        item.addEventListener("click", function (e) {
+          const targetPage = e.target.textContent.toLowerCase().trim();
+
+          switch (targetPage) {
+            case "home":
+              window.location.href = "index.html";
+              break;
+            case "general":
+              navigateToPage("profile.html");
+              break;
+            case "security":
+              navigateToPage("settings.html");
+              break;
+            case "notifications":
+              navigateToPage("about.html");
+              break;
+            case "integrations":
+              navigateToPage("integrations.html");
+              break;
+          }
+        });
+      });
+
+      function navigateToPage(pageName) {
+        window.location.href = pageName;
+      }
+    });
+  </script>
+  <body>
+    <div class="grid-container">
+      <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <img src="assets/logoutama.png" alt="Logo Kesehatan" class="Logo" />
+        </div>
+        <ul class="sidenav__list">
+          <li class="sidenav__list-item">Home</li>
+          <li class="sidenav__list-item">General</li>
+          <li class="sidenav__list-item">Security</li>
+          <li class="sidenav__list-item">Notifications</li>
+          <li class="sidenav__list-item">Integrations</li>
+        </ul>
+      </aside>
+      <main class="main">
+        <div class="main-header">
+          <h1>Pengaturan Dashboard</h1>
+        </div>
+        <div class="settings-content">
+          <!-- Bagian Umum -->
+          <section class="settings-section">
+            <h2>Umum</h2>
+            <div class="settings-card">
+              <div class="setting-item">
+                <label class="setting-label">Tema</label>
+                <select class="setting-control">
+                  <option value="light">Terang</option>
+                  <option value="dark">Gelap</option>
+                </select>
+              </div>
+              <div class="setting-item">
+                <label class="setting-label">Bahasa</label>
+                <select class="setting-control">
+                  <option value="id">Indonesia</option>
+                  <option value="en">English</option>
+                </select>
+              </div>
+              <div class="setting-item">
+                <label class="setting-label">Format Tanggal</label>
+                <select class="setting-control">
+                  <option value="dd-mm-yyyy">DD-MM-YYYY</option>
+                  <option value="mm-dd-yyyy">MM-DD-YYYY</option>
+                </select>
+              </div>
+            </div>
+          </section>
+
+          <!-- Bagian Keamanan -->
+          <section class="settings-section">
+            <h2>Keamanan</h2>
+            <div class="settings-card">
+              <div class="setting-item">
+                <label class="setting-label">Kunci Layar Otomatis</label>
+                <div class="setting-control">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="setting-item">
+                <label class="setting-label">Autentikasi Dua Faktor</label>
+                <div class="setting-control">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Bagian Notifikasi -->
+          <section class="settings-section">
+            <h2>Notifikasi</h2>
+            <div class="settings-card">
+              <div class="setting-item">
+                <label class="setting-label">Notifikasi Email</label>
+                <div class="setting-control">
+                  <label class="switch">
+                    <input type="checkbox" checked />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="setting-item">
+                <label class="setting-label">Notifikasi Push</label>
+                <div class="setting-control">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Bagian Integrasi -->
+          <section class="settings-section">
+            <h2>Integrasi</h2>
+            <div class="settings-card">
+              <div class="setting-item">
+                <label class="setting-label">Google Fit</label>
+                <div class="setting-control">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="setting-item">
+                <label class="setting-label">Apple Health</label>
+                <div class="setting-control">
+                  <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
