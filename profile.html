@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Profile Glenvidi Yosua Gerungan</title>
+    <link rel="stylesheet" href="index-final-style.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Sidebar Navigation -->
+      <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <img src="assets/logoutama.png" alt="Logo Kesehatan" class="Logo" />
+        </div>
+        <ul class="sidenav__list">
+          <li class="sidenav__list-item">Home</li>
+          <li class="sidenav__list-item">Profile</li>
+        </ul>
+      </aside>
+      <!-- Main Content -->
+      <main class="main">
+        <div class="main-header">
+          <h1>Profile</h1>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      // Tambahkan event listener ke item navigasi
+      document.querySelectorAll(".sidenav__list-item").forEach((item) => {
+        item.addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+      });
+    </script>
+  </body>
+</html>

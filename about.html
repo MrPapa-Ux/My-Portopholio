@@ -1,19 +1,41 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <title>Tentang Dashboard</title>
+    <title>Settings Dashboard</title>
     <link rel="stylesheet" href="index-final-style.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Menangani klik pada item Home
+        const homeItem = document.querySelector(".sidenav__list-item");
+        homeItem.addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="grid-container">
-      <!-- Konten tentang -->
+      <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <img src="assets/logoutama.png" alt="Logo Kesehatan" class="Logo" />
+        </div>
+        <ul class="sidenav__list">
+          <li class="sidenav__list-item">Home</li>
+          <li class="sidenav__list-item">About</li>
+        </ul>
+      </aside>
       <main class="main">
         <div class="main-header">
-          <h1>Tentang Dashboard</h1>
+          <h1>Test</h1>
         </div>
-        <!-- Tambahkan konten tentang sesuai kebutuhan -->
+        <div class="settings-content">
+          <div class="card">
+            <div class="card-content">
+              <p>This is just an experimental</p>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </body>
